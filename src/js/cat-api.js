@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 axios.defaults.headers.common['x-api-key'] =
-  'live_its2MIYBDJ2UdM1DaFX4x9mCrCfAoMF7BKs8ACR9TbSAnQGGZ5VJSQiKKBFzhTiW';
+  'live_MLyGVnh3kRkOutkpv33JEYLhrkCo7kxLPJ72lOc4sGnq038d26A1w8UP842vM0IM';
 
 axios.defaults.baseURL = 'https://api.thecatapi.com/v1';
 
@@ -11,10 +11,10 @@ function fetchBreeds() {
   });
 }
 
-function fetchCatByBreed(breedId) {
+function fetchBreedId(breedId) {
   return axios.get(`/images/search?breed_ids=${breedId}`).then(resp => {
     return resp.data;
   });
 }
 
-module.exports = { fetchBreeds, fetchCatByBreed };
+module.exports = { fetchBreeds, fetchBreedId };
